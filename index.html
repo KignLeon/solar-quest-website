@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarQuest Power | San Diego Solar Energy &amp; Panel Installation</title>
+    <meta name="description" content="Southern California Solar Power — Get a free quote for residential and commercial solar panels. Tier 1 panels, $0 down financing. Call (619) 292-8062 today!">
+    <link rel="icon" href="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1776961789/logo.png_eggsre.webp" type="image/webp">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/brand-solarquest.css">
+    <style>
+    .wa-chat-widget { bottom: 96px !important; z-index: 9500 !important; }
+    .mobile-sticky-bar { z-index: 9000 !important; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style id="antigravity-scroll-lock-style">
+  html:root body.antigravity-scroll-lock {
+    overflow: hidden !important;
+  }
+</style><style>
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+</style></head>
+
+<body class="">
+    <canvas id="leaf-canvas"></canvas>
+    <div class="aurora-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:6192928062"><i class="fas fa-phone"></i> (619) 292-8062</a>
+                <a href="mailto:info@solarquestpower.com"><i class="fas fa-envelope"></i>
+                    info@solarquestpower.com</a>
+            </div>
+            <div class="top-bar-right">
+                <span><i class="fas fa-map-marker-alt"></i> San Diego, CA</span>
+                <span><i class="fas fa-solar-panel"></i> Free Solar Consultations</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1776961789/logo.png_eggsre.webp" alt="SolarQuest Power">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/gallery/">Gallery</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+            <a href="#quote-modal" class="btn btn-glow nav-cta" id="nav-quote-btn">Get Free Solar Quote ☀️</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero hero-split" id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&amp;q=90&amp;auto=format&amp;fit=crop" alt="SolarQuest Power — San Diego solar installation">
+        </div>
+        <div class="hero-split-inner container">
+            <!-- LEFT: Headline -->
+            <div class="hero-content anim-fade-up anim-visible">
+                <span class="hero-badge glass-sm">☀️ C-10 Licensed (#992252) · San Diego Solar Experts</span>
+                <h1>Achieve Energy<br><span class="text-gradient">Independence with Solar.</span></h1>
+                <p class="hero-sub">SolarQuest Power installs premium solar systems for San Diego homes and businesses. Slash your electric bills by up to 80%, increase your home value, and own your energy — with $0 down financing available.</p>
+                <div class="hero-actions">
+                    <a href="tel:6192928062" class="btn btn-outline btn-lg"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="/contact/" class="btn btn-glow btn-lg">Get Free Solar Quote ☀️</a>
+                    <p style="color:rgba(255,255,255,.75);font-size:13px;margin-top:10px;margin-bottom:0;">✓ C-10 Licensed &amp; Insured &nbsp;·&nbsp; ✓ $0 Down Financing &nbsp;·&nbsp; ✓ Tier 1 Panels</p>
+                </div>
+            </div>
+            <!-- RIGHT: Inline Quote Form -->
+            <div class="hero-form-card glass anim-fade-up anim-visible">
+                <h3>Get a Free Solar Quote ☀️</h3>
+                <p class="hero-form-sub" style="margin-bottom:16px;">See how much you can save — we respond within 24 hours.</p>
+                <form id="hero-quote-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Smith" required="">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" placeholder="(619) 292-8062" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="john@example.com" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Service</label>
+                        <select>
+                            <option value="">Select a service...</option>
+                            <option>Residential Solar Installation</option>
+                            <option>Commercial Solar Systems</option>
+                            <option>Solar + Battery Storage</option>
+                            <option>EV Charger Installation</option>
+                            <option>Electrical Panel Upgrade</option>
+                            <option>Solar System Monitoring</option>
+                            <option>Solar Financing Consultation</option>
+                            <option>Roof Assessment &amp; Solar Design</option>
+                            <option>Net Metering Setup</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Details</label>
+                        <textarea rows="3" placeholder="Tell us about your property and energy goals..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-glow btn-full">Get My Free Solar Quote ☀️</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRASS DIVIDER -->
+    <div class="grass-divider"><svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,60 L0,30 Q15,0 30,28 Q45,5 60,25 Q75,0 90,30 Q105,8 120,26 Q135,2 150,28 Q165,10 180,24 Q195,0 210,30 Q225,6 240,26 Q255,2 270,28 Q285,8 300,24 Q315,0 330,30 Q345,5 360,25 Q375,2 390,28 Q405,10 420,26 Q435,0 450,30 Q465,6 480,24 Q495,2 510,28 Q525,8 540,26 Q555,0 570,30 Q585,5 600,25 Q615,2 630,28 Q645,10 660,24 Q675,0 690,30 Q705,6 720,26 Q735,2 750,28 Q765,8 780,24 Q795,0 810,30 Q825,5 840,25 Q855,2 870,28 Q885,10 900,26 Q915,0 930,30 Q945,6 960,24 Q975,2 990,28 Q1005,8 1020,26 Q1035,0 1050,30 Q1065,5 1080,25 Q1095,2 1110,28 Q1125,10 1140,24 Q1155,0 1170,30 Q1185,6 1200,26 L1200,60Z" fill="#2563eb" opacity=".15"></path>
+        </svg></div>
+
+    <!-- STATS -->
+    <section class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-card glass anim-fade-up">
+                <div class="stat-number">15<span>+</span></div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card glass anim-fade-up">
+                <div class="stat-number">5.0<span>★</span></div>
+                <div class="stat-label">Google Rating</div>
+            </div>
+            <div class="stat-card glass anim-fade-up">
+                <div class="stat-number">1000<span>+</span></div>
+                <div class="stat-label">Solar Installs</div>
+            </div>
+            <div class="stat-card glass anim-fade-up">
+                <div class="stat-number">$0<span></span></div>
+                <div class="stat-label">Down Financing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="section about-section" id="about">
+        <div class="container about-grid">
+            <div class="about-image anim-slide-left">
+                <div class="glass image-frame grass-frame">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=900&amp;q=85&amp;auto=format" alt="SolarQuest Power team installing solar panels in San Diego">
+                </div>
+            </div>
+            <div class="about-text anim-slide-right">
+                <span class="section-tag glass-sm">About Us</span>
+                <h2>Southern California's Premier <span class="text-gradient">Solar Power Experts</span></h2>
+                <p>SolarQuest prides itself on providing informative and accurate information for decision making on a solar power system for any home or business in the San Diego area. We are a licensed C-10 contractor (#992252) with over 15 years of experience.</p>
+                <p>We use Tier 1 panel manufacturers such as QCell, LG, Kyocera and Solaria. Our BPI/HERS certified solar designers ensure every system is custom-built for maximum energy savings.</p>
+                <div class="about-features">
+                    <div class="feature-chip glass-sm"><i class="fas fa-solar-panel"></i> C-10 Licensed</div>
+                    <div class="feature-chip glass-sm"><i class="fas fa-shield-alt"></i> Fully Insured</div>
+                    <div class="feature-chip glass-sm"><i class="fas fa-dollar-sign"></i> $0 Down Financing</div>
+                    <div class="feature-chip glass-sm"><i class="fas fa-certificate"></i> Tier 1 Panels</div>
+                </div>
+                <div class="view-all" style="text-align:left;margin-top:24px">
+                    <a href="/about/" class="btn btn-secondary">Learn More About Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRASS DIVIDER -->
+    <div class="grass-divider grass-divider-flip"><svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,60 L0,30 Q15,0 30,28 Q45,5 60,25 Q75,0 90,30 Q105,8 120,26 Q135,2 150,28 Q165,10 180,24 Q195,0 210,30 Q225,6 240,26 Q255,2 270,28 Q285,8 300,24 Q315,0 330,30 Q345,5 360,25 Q375,2 390,28 Q405,10 420,26 Q435,0 450,30 Q465,6 480,24 Q495,2 510,28 Q525,8 540,26 Q555,0 570,30 Q585,5 600,25 Q615,2 630,28 Q645,10 660,24 Q675,0 690,30 Q705,6 720,26 Q735,2 750,28 Q765,8 780,24 Q795,0 810,30 Q825,5 840,25 Q855,2 870,28 Q885,10 900,26 Q915,0 930,30 Q945,6 960,24 Q975,2 990,28 Q1005,8 1020,26 Q1035,0 1050,30 Q1065,5 1080,25 Q1095,2 1110,28 Q1125,10 1140,24 Q1155,0 1170,30 Q1185,6 1200,26 L1200,60Z" fill="#2563eb" opacity=".12"></path>
+        </svg></div>
+
+    <!-- SERVICES PREVIEW (3 cards) -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag glass-sm">Our Services</span>
+                <h2>Professional Solar &amp; Energy <span class="text-gradient">Solutions</span></h2>
+                <p>From residential solar to commercial installations — we power every project with expertise.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass anim-fade-up">
+                    <div class="service-img grass-frame"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;q=85&amp;auto=format" alt="Residential solar panel installation San Diego" loading="lazy"></div>
+                    <div class="service-body">
+                        <h3>Residential Solar Installation</h3>
+                        <p>Custom-designed solar systems for your home. Reduce your electric bill by up to 80% with Tier 1 panels and expert installation.</p>
+                    </div>
+                </div>
+                <div class="service-card glass anim-fade-up">
+                    <div class="service-img grass-frame"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&amp;q=85&amp;auto=format" alt="Commercial solar installation" loading="lazy"></div>
+                    <div class="service-body">
+                        <h3>Commercial Solar Systems</h3>
+                        <p>Large-scale solar solutions for businesses. Lower operating costs, boost sustainability, and qualify for commercial tax incentives.</p>
+                    </div>
+                </div>
+                <div class="service-card glass anim-fade-up">
+                    <div class="service-img grass-frame"><img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&amp;q=85&amp;auto=format" alt="Solar battery storage system" loading="lazy"></div>
+                    <div class="service-body">
+                        <h3>Solar + Battery Storage</h3>
+                        <p>Achieve true energy independence with solar paired with battery backup. Power your home even during outages.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all"><a href="/services/">View All Services <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+    </section>
+
+    <!-- GRASS DIVIDER -->
+    <div class="grass-divider"><svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,60 L0,30 Q15,0 30,28 Q45,5 60,25 Q75,0 90,30 Q105,8 120,26 Q135,2 150,28 Q165,10 180,24 Q195,0 210,30 Q225,6 240,26 Q255,2 270,28 Q285,8 300,24 Q315,0 330,30 Q345,5 360,25 Q375,2 390,28 Q405,10 420,26 Q435,0 450,30 Q465,6 480,24 Q495,2 510,28 Q525,8 540,26 Q555,0 570,30 Q585,5 600,25 Q615,2 630,28 Q645,10 660,24 Q675,0 690,30 Q705,6 720,26 Q735,2 750,28 Q765,8 780,24 Q795,0 810,30 Q825,5 840,25 Q855,2 870,28 Q885,10 900,26 Q915,0 930,30 Q945,6 960,24 Q975,2 990,28 Q1005,8 1020,26 Q1035,0 1050,30 Q1065,5 1080,25 Q1095,2 1110,28 Q1125,10 1140,24 Q1155,0 1170,30 Q1185,6 1200,26 L1200,60Z" fill="#2563eb" opacity=".15"></path>
+        </svg></div>
+
+    <!-- GALLERY PREVIEW (4 images) -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag glass-sm">Our Projects</span>
+                <h2>Solar <span class="text-gradient">Gallery</span></h2>
+                <p>Real solar installations across Southern California.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;q=85&amp;auto=format" alt="Residential solar installation" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&amp;q=85&amp;auto=format" alt="Commercial solar array" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&amp;q=85&amp;auto=format" alt="Solar battery installation" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&amp;q=85&amp;auto=format" alt="Solar panels on home" loading="lazy"></div>
+            </div>
+            <div class="view-all"><a href="/gallery/">View Full Gallery <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag glass-sm">Testimonials</span>
+                <h2>What Our Clients <span class="text-gradient">Say</span></h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card glass anim-fade-up">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"SolarQuest installed our solar system and we've cut our electric bill by over 70%. The team was professional, clean, and handled all the permits. Highly recommend!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">M</div>
+                        <div><strong>Maria S.</strong><span>San Diego, CA</span></div>
+                    </div>
+                </div>
+                <div class="review-card glass anim-fade-up">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"From initial consultation to final inspection, SolarQuest was outstanding. They designed a system that perfectly fits our roof and energy needs. Already seeing huge savings!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">D</div>
+                        <div><strong>David R.</strong><span>Chula Vista, CA</span></div>
+                    </div>
+                </div>
+                <div class="review-card glass anim-fade-up">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Best solar company in San Diego! SolarQuest handled our commercial installation start to finish — permits, inspection, utility connection. The system has been running perfectly for 8 months!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">C</div>
+                        <div><strong>Carlos T.</strong><span>El Cajon, CA</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAVE A REVIEW CTA -->
+    <section class="section review-cta-section">
+        <div class="container">
+            <div class="review-cta-card glass anim-fade-up">
+                <div class="review-cta-left">
+                    <span class="section-tag glass-sm">Share Your Experience</span>
+                    <h2>Loved Our Projects? <span class="text-gradient">Tell Us!</span></h2>
+                    <p>Your feedback helps us grow and serve you better. It only takes 30 seconds.</p>
+                </div>
+                <div class="review-cta-right">
+                    <div class="review-stars-preview">
+                        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                    <button class="btn btn-glow btn-lg" id="open-review-btn">Leave a Review ⚡</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section" style="background:var(--off-white)">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag glass-sm">Why Choose Us</span>
+                <h2>Why San Diego Trusts <span class="text-gradient">SolarQuest Power</span></h2>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+                <div class="glass anim-fade-up" style="padding:32px;border-radius:16px;text-align:center;">
+                    <i class="fas fa-certificate" style="font-size:36px;color:#E87C2A;margin-bottom:16px;"></i>
+                    <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">C-10 Licensed (#992252)</h3>
+                    <p style="font-size:14px;color:#64748b;">Fully licensed by the California State License Board. We do all the work ourselves — no subcontractors.</p>
+                </div>
+                <div class="glass anim-fade-up" style="padding:32px;border-radius:16px;text-align:center;">
+                    <i class="fas fa-solar-panel" style="font-size:36px;color:#4D8C2A;margin-bottom:16px;"></i>
+                    <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">Tier 1 Solar Panels</h3>
+                    <p style="font-size:14px;color:#64748b;">We use only premium Tier 1 manufacturers like QCell, LG, Kyocera and Solaria for maximum performance and longevity.</p>
+                </div>
+                <div class="glass anim-fade-up" style="padding:32px;border-radius:16px;text-align:center;">
+                    <i class="fas fa-star" style="font-size:36px;color:#f5a623;margin-bottom:16px;"></i>
+                    <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">5-Star Rated</h3>
+                    <p style="font-size:14px;color:#64748b;">Hundreds of satisfied homeowners and businesses across San Diego County trust our solar installations.</p>
+                </div>
+                <div class="glass anim-fade-up" style="padding:32px;border-radius:16px;text-align:center;">
+                    <i class="fas fa-dollar-sign" style="font-size:36px;color:#E87C2A;margin-bottom:16px;"></i>
+                    <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">$0 Down Financing</h3>
+                    <p style="font-size:14px;color:#64748b;">Flexible financing options make going solar affordable. Start saving from day one with zero upfront cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+        <div class="container anim-fade-up">
+            <h2>Ready to Go Solar? See How Much You Can Save.</h2>
+            <p>Get started with a free solar consultation today. 15+ years of expertise at your service.</p>
+            <a href="/contact/" class="btn btn-glow btn-lg">Get a Free Solar Quote ☀️</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1776961789/logo.png_eggsre.webp" alt="SolarQuest Power" class="footer-logo">
+                <p>A solar world is a better world. Powering San Diego homes and businesses for 15+ years.</p>
+                <div class="footer-socials" style="display:flex;gap:12px;margin-top:16px;">
+                    <a href="https://www.instagram.com/solarquestpower" target="_blank" rel="noopener" aria-label="Instagram" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;transition:all .3s;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/solarquestpower" target="_blank" rel="noopener" aria-label="X / Twitter" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;transition:all .3s;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/SolarQuestPower/photos" target="_blank" rel="noopener" aria-label="Facebook" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;transition:all .3s;"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Pages</h4><a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a><a href="/gallery/">Gallery</a><a href="/contact/">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                    <a href="/services/">Residential Solar</a>
+                    <a href="/services/">Commercial Solar</a>
+                    <a href="/services/">Battery Storage</a>
+                    <a href="/services/">EV Charger Install</a>
+                    <a href="/services/">Panel Upgrades</a>
+                </div>
+            <div class="footer-links">
+                <h4>Contact</h4><a href="tel:6192928062">(619) 292-8062</a><a href="mailto:info@solarquestpower.com">Email Us</a><span>San Diego, CA</span><span>Free Solar Consultations</span>
+            </div>
+        </div>
+        <!-- FOOTER MAP -->
+        <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.3!2d-116.9625!3d32.7948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9554056934bff%3A0x7bd0683b3b517351!2sYour%20Business%20Location!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SolarQuest Power location"></iframe>
+        </div>
+        <div class="footer-bottom" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;">
+            <p>© 2015–2026 SolarQuest Power. All rights reserved.</p>
+            <div class="footer-bottom-socials" style="display:flex;gap:16px;font-size:16px;">
+                <a href="https://www.instagram.com/solarquestpower" target="_blank" rel="noopener" style="color:rgba(255,255,255,.6);transition:color .3s;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/solarquestpower" target="_blank" rel="noopener" style="color:rgba(255,255,255,.6);transition:color .3s;" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/SolarQuestPower/photos" target="_blank" rel="noopener" style="color:rgba(255,255,255,.6);transition:color .3s;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- REVIEW MODAL -->
+    <div class="modal-overlay" id="review-modal">
+        <div class="modal glass review-modal-inner">
+            <button class="modal-close" id="review-modal-close">✕</button>
+
+            <!-- STEP 1: Star Rating -->
+            <div class="review-step" id="review-step-1">
+                <div class="review-modal-icon">⭐</div>
+                <h2>How was your experience?</h2>
+                <p>Tap a star to rate SolarQuest Power.</p>
+                <div class="star-rating" id="star-rating">
+                    <button class="star" data-value="1" aria-label="1 star">★</button>
+                    <button class="star" data-value="2" aria-label="2 stars">★</button>
+                    <button class="star" data-value="3" aria-label="3 stars">★</button>
+                    <button class="star" data-value="4" aria-label="4 stars">★</button>
+                    <button class="star" data-value="5" aria-label="5 stars">★</button>
+                </div>
+            </div>
+
+            <!-- STEP 2a: Private Feedback (1-3 stars) -->
+            <div class="review-step hidden" id="review-step-feedback">
+                <div class="review-modal-icon">💬</div>
+                <h2>We're sorry to hear that.</h2>
+                <p>Please share your feedback privately so we can make it right.</p>
+                <form id="private-feedback-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="John Smith" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone or Email</label>
+                        <input type="text" placeholder="(619) 292-8062 or info@solarquestpower.com" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>What could we have done better?</label>
+                        <textarea rows="4" placeholder="Tell us what happened..." required=""></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-glow btn-full">Send Private Feedback</button>
+                </form>
+            </div>
+
+            <!-- STEP 2b: Thank You / Google redirect (4-5 stars) -->
+            <div class="review-step hidden" id="review-step-google">
+                <div class="review-modal-icon">🎉</div>
+                <h2>Thank you so much!</h2>
+                <p>We're thrilled you had a great experience! Would you mind sharing it on Google? It takes less than a
+                    minute.</p>
+                <a href="https://search.google.com/local/writereview?placeid=ChIJSampleSolarQuestPower" target="_blank" rel="noopener noreferrer" class="btn btn-glow btn-lg btn-full" id="google-review-link">
+                    <i class="fab fa-google"></i> Write a Google Review
+                </a>
+                <button class="btn btn-secondary btn-full" style="margin-top:10px" id="review-skip-btn">Maybe
+                    later</button>
+            </div>
+
+            <!-- STEP 3: Feedback Submitted -->
+            <div class="review-step hidden" id="review-step-done">
+                <div class="review-modal-icon">✅</div>
+                <h2>Feedback received!</h2>
+                <p>Thank you for letting us know. We'll reach out to make things right as soon as possible.</p>
+                <button class="btn btn-glow btn-full" id="review-done-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUOTE MODAL -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal glass">
+            <button class="modal-close" id="modal-close">×</button>
+            <h2>Get Your Free Solar Quote ☀️</h2>
+            <p>Fill out the form and we'll get back to you within 24 hours.</p>
+            <form id="quote-form">
+                <div class="form-row">
+                    <div class="form-group"><label>Full Name</label><input type="text" placeholder="John Smith" required=""></div>
+                    <div class="form-group"><label>Phone</label><input type="tel" placeholder="(619) 292-8062" required="">
+                    </div>
+                </div>
+                <div class="form-group"><label>Email</label><input type="email" placeholder="john@example.com" required="">
+                </div>
+                <div class="form-group"><label>Service</label><select>
+                        <option value="">Select a service...</option>
+                        <option>Residential Solar Installation</option>
+                        <option>Commercial Solar Systems</option>
+                        <option>Solar + Battery Storage</option>
+                        <option>EV Charger Installation</option>
+                        <option>Electrical Panel Upgrade</option>
+                        <option>Solar System Monitoring</option>
+                        <option>Solar Financing Consultation</option>
+                        <option>Roof Assessment &amp; Solar Design</option>
+                        <option>Net Metering Setup</option>
+                    </select></div>
+                <div class="form-group"><label>Details</label><textarea rows="3" placeholder="Tell us about your property and energy goals..."></textarea></div>
+                <button type="submit" class="btn btn-glow btn-full">Get My Free Solar Quote ☀️</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- WHATSAPP WIDGET -->
+    <div class="wa-chat-widget" id="wa-widget">
+        <button class="wa-fab glass" id="wa-fab" aria-label="Chat"><i class="fab fa-whatsapp"></i><span class="wa-pulse"></span></button>
+        <div class="wa-chat-window glass" id="wa-chat-window">
+            <div class="wa-chat-header">
+                <div class="wa-header-info">
+                    <div class="wa-avatar"><img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1776961789/logo.png_eggsre.webp" alt="SQ"><span class="wa-online"></span></div>
+                    <div><strong>SolarQuest Power</strong><span class="wa-status">AI Assistant · Online</span>
+                    </div>
+                </div>
+                <button class="wa-close" id="wa-close">×</button>
+            </div>
+            <div class="wa-chat-body" id="wa-chat-body">
+                <div class="wa-msg wa-msg-bot">
+                    <p>👋 Hi! I'm the SolarQuest Power AI assistant. How can I help you go solar?</p><span class="wa-time">Just
+                        now</span>
+                </div>
+                <div class="wa-quick-replies" id="wa-quick-replies">
+                    <button class="wa-quick glass-sm" data-msg="What solar services do you offer?">Services</button>
+                    <button class="wa-quick glass-sm" data-msg="I'd like a free solar quote">Free Quote</button>
+                    <button class="wa-quick glass-sm" data-msg="What areas do you serve?">Areas</button>
+                    <button class="wa-quick glass-sm" data-msg="Do you offer financing?">Financing</button>
+                </div>
+            </div>
+            <div class="wa-chat-input"><input type="text" id="wa-input" placeholder="Type a message..." autocomplete="off"><button class="wa-send" id="wa-send"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div class="wa-footer"><a href="https://wa.me/16192928062" target="_blank" class="wa-redirect"><i class="fab fa-whatsapp"></i> Continue on WhatsApp</a></div>
+        </div>
+    </div>
+
+    <!-- MOBILE STICKY -->
+    <div class="mobile-sticky-bar" id="mobile-sticky">
+        <a href="tel:6192928062" class="sticky-btn"><i class="fas fa-phone"></i> Call</a>
+        <a href="#quote-modal" class="sticky-btn sticky-btn-primary" id="sticky-quote-btn"><i class="fas fa-solar-panel"></i> Quote</a>
+        <button class="sticky-btn sticky-btn-review" id="sticky-review-btn"><i class="fas fa-star"></i> Review</button>
+        <a href="https://wa.me/16192928062" target="_blank" class="sticky-btn sticky-btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
+    </div>
+
+    <script src="js/main.js"></script>
+
+<!-- QUOTE POPUP MODAL -->
+<div id="quote-popup" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(10,15,40,.75);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border-radius:20px;max-width:520px;width:100%;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.35);animation:popSlideIn .45s cubic-bezier(.34,1.56,.64,1) both;position:relative;">
+    <div style="background:linear-gradient(135deg,#1a2332 0%,#E87C2A 65%,#4D8C2A 100%);padding:32px 36px 24px;color:#fff;position:relative;">
+      <button onclick="document.getElementById('quote-popup').style.display='none'" style="position:absolute;top:14px;right:18px;background:rgba(255,255,255,.15);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close">×</button>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.4);border-radius:50px;padding:4px 14px;font-size:11px;font-weight:700;color:#fcd34d;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px;">☀️ Limited Install Slots This Month</div>
+      <h2 style="font-size:26px;font-weight:900;line-height:1.2;margin-bottom:8px;">See How Much You Can<br>Save with Solar</h2>
+      <p style="font-size:14px;opacity:.85;margin:0;">Get a fast, free quote from certified solar professionals.</p>
+    </div>
+    <div style="background:#fff4eb;padding:10px 36px;display:flex;gap:20px;font-size:12px;font-weight:600;color:#c4621e;flex-wrap:wrap;">
+      <span>✓ C-10 Licensed</span><span>✓ Tier 1 Panels</span><span>✓ $0 Down Financing</span>
+    </div>
+    <form id="popup-quote-form" style="padding:24px 36px 32px;" onsubmit="sqPopupSubmit(event)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+        <div><label style="display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;">Your Name *</label>
+        <input type="text" name="name" placeholder="John Smith" required="" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;outline:none;font-family:inherit;"></div>
+        <div><label style="display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;">Phone *</label>
+        <input type="tel" name="phone" placeholder="(619) 292-8062" required="" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;outline:none;font-family:inherit;"></div>
+      </div>
+      <div style="margin-bottom:14px;"><label style="display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;">Email</label>
+      <input type="email" name="email" placeholder="you@example.com" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;outline:none;font-family:inherit;"></div>
+      <div style="margin-bottom:20px;"><label style="display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;">Service Needed</label>
+      <select name="service" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;outline:none;background:#fff;font-family:inherit;">
+        <option value="">Select a service...</option>
+        <option>Residential Solar Installation</option><option>Commercial Solar Systems</option>
+        <option>Solar + Battery Storage</option><option>EV Charger Installation</option>
+        <option>Electrical Panel Upgrade</option><option>Solar System Monitoring</option>
+        <option>Solar Financing Consultation</option><option>Roof Assessment &amp; Solar Design</option>
+        <option>Net Metering Setup</option>
+      </select></div>
+      <button type="submit" style="width:100%;padding:16px;background:linear-gradient(135deg,#E87C2A,#c4621e);color:#fff;font-size:16px;font-weight:800;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 20px rgba(232,124,42,.4);font-family:inherit;">☀️ Get My Free Solar Quote</button>
+      <p style="text-align:center;font-size:12px;color:#94a3b8;margin:10px 0 0;">No spam, no commitment — we'll reach out fast.</p>
+    </form>
+    <div id="popup-success" style="display:none;padding:40px 36px;text-align:center;">
+      <div style="font-size:52px;margin-bottom:14px;">✅</div>
+      <h3 style="font-size:22px;font-weight:900;color:#0f172a;margin-bottom:8px;">Request Received!</h3>
+      <p style="color:#475569;margin-bottom:24px;">Our solar team will respond within a few hours. For faster service, call us now:</p>
+      <a href="tel:6192928062" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#E87C2A,#c4621e);color:#fff;padding:14px 28px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;">📞 (619) 292-8062</a>
+    </div>
+  </div>
+</div>
+<style>
+@keyframes popSlideIn{from{opacity:0;transform:scale(.88) translateY(28px)}to{opacity:1;transform:scale(1) translateY(0)}}
+</style>
+<script>
+(function(){
+  if(sessionStorage.getItem('sqQuoteShown')) return;
+  var shown=false;
+  function show(){
+    if(shown) return; shown=true;
+    sessionStorage.setItem('sqQuoteShown','1');
+    var el=document.getElementById('quote-popup');
+    if(el) el.style.display='flex';
+  }
+  setTimeout(show, 4500);
+  document.addEventListener('mouseleave',function(e){if(e.clientY<5) show();});
+  var pop=document.getElementById('quote-popup');
+  if(pop) pop.addEventListener('click',function(e){if(e.target===this) this.style.display='none';});
+})();
+function sqPopupSubmit(e){
+  e.preventDefault();
+  document.getElementById('popup-quote-form').style.display='none';
+  document.getElementById('popup-success').style.display='block';
+}
+</script>
+<!-- END POPUP -->
+<!-- WA FLOAT REMOVED — using AI chat widget only -->
+
+
+<div id="preact-border-shadow-host" popover="manual" style="border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px; margin: 0px; inset: 0px; position: fixed; width: 100vw; height: 100vh; background: transparent; pointer-events: none;"></div></body></html>
