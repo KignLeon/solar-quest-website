@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | SolarQuest Power</title>
+    <meta name="description" content="Browse real electrical and solar projects completed across San Diego County by SolarQuest Power Before &amp; after transformations, EV charger installs, panel upgrades &amp; more.">
+    <link rel="icon" href="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1776961789/logo.png_eggsre.webp" type="image/webp">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/brand-solarquest.css">
+    <style>
+    .wa-chat-widget { bottom: 96px !important; z-index: 9500 !important; }
+    .wa-fab { background: linear-gradient(135deg, #1d4ed8, #0891b2) !important; box-shadow: 0 4px 20px rgba(29,78,216,.5) !important; }
+    .wa-fab:hover { box-shadow: 0 8px 32px rgba(29,78,216,.7) !important; }
+    .wa-fab .fa-whatsapp { filter: brightness(10) !important; }
+    .wa-pulse { border-color: #1d4ed8 !important; }
+    .mobile-sticky-bar { z-index: 9000 !important; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style id="antigravity-scroll-lock-style">
+  html:root body.antigravity-scroll-lock {
+    overflow: hidden !important;
+  }
+</style><style>
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+</style></head>
+
+<body class="antigravity-scroll-lock">
+    <canvas id="leaf-canvas"></canvas>
+    <div class="aurora-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left"><a href="tel:6192928062"><i class="fas fa-phone"></i> (619) 292-8062</a><a href="mailto:info@solarquestpower.com"><i class="fas fa-envelope"></i>
+                    info@solarquestpower.com</a></div>
+            <div class="top-bar-right"><span><i class="fas fa-map-marker-alt"></i> San Diego, CA</span></div>
+        </div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner"><a href="/" class="nav-logo"><img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1776961789/logo.png_eggsre.webp" alt="SolarQuest Power"></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/gallery/" class="active">Gallery</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul><a href="/contact/" class="btn btn-glow nav-cta">Get Free Solar Quote ☀️</a><button class="mobile-toggle" id="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb"><a href="/">Home</a> / <span>Gallery</span></div>
+            <h1>Project <span class="text-gradient">Gallery</span></h1>
+            <p>Real transformations from our electrical projects across San Diego County.</p>
+        </div>
+    </section>
+
+    <div class="grass-divider"><svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,60 L0,30 Q15,0 30,28 Q45,5 60,25 Q75,0 90,30 Q105,8 120,26 Q135,2 150,28 Q165,10 180,24 Q195,0 210,30 Q225,6 240,26 Q255,2 270,28 Q285,8 300,24 Q315,0 330,30 Q345,5 360,25 Q375,2 390,28 Q405,10 420,26 Q435,0 450,30 Q465,6 480,24 Q495,2 510,28 Q525,8 540,26 Q555,0 570,30 Q585,5 600,25 Q615,2 630,28 Q645,10 660,24 Q675,0 690,30 Q705,6 720,26 Q735,2 750,28 Q765,8 780,24 Q795,0 810,30 Q825,5 840,25 Q855,2 870,28 Q885,10 900,26 Q915,0 930,30 Q945,6 960,24 Q975,2 990,28 Q1005,8 1020,26 Q1035,0 1050,30 Q1065,5 1080,25 Q1095,2 1110,28 Q1125,10 1140,24 Q1155,0 1170,30 Q1185,6 1200,26 L1200,60Z" fill="#2563eb" opacity=".15"></path>
+        </svg></div>
+
+    <!-- BEFORE/AFTER SLIDER (moved to top) -->
+    <section class="section before-after-section">
+        <div class="container">
+            <div class="section-header anim-fade-up anim-visible">
+                <span class="section-tag glass-sm">Results</span>
+                <h2>Before &amp; <span class="text-gradient">After</span></h2>
+                <p>Drag the slider to see the transformation — a real garage electrical upgrade.</p>
+            </div>
+            <div class="ba-slider-wrap glass anim-fade-up">
+                <div class="ba-slider" id="ba-slider">
+                    <div class="ba-image ba-after"><img src="/img-after.png" alt="After — professional garage electrical upgrade"><span class="ba-label ba-label-after glass-sm">After</span></div>
+                    <div class="ba-image ba-before"><img src="/img-before.png" alt="Before — outdated garage electrical"><span class="ba-label ba-label-before glass-sm">Before</span></div>
+                    <div class="ba-handle" id="ba-handle">
+                        <div class="ba-handle-line"></div>
+                        <div class="ba-handle-circle glass"><i class="fas fa-arrows-left-right"></i></div>
+                        <div class="ba-handle-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL GALLERY — masonry -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag glass-sm">Our Projects</span>
+                <h2>Electrical &amp; Solar <span class="text-gradient">Transformations</span></h2>
+                <p>Each photo showcases a real project from our San Diego County portfolio.</p>
+            </div>
+            <div class="gallery-masonry">
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&amp;q=85&amp;auto=format" alt="Electrical panel upgrade" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&amp;q=80" alt="Solar panel installation" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&amp;q=80" alt="EV charger installation" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&amp;q=85&amp;auto=format" alt="Residential wiring project" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&amp;q=80" alt="Commercial lighting project" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&amp;q=80" alt="Smart home electrical setup" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&amp;q=80" alt="Generator installation" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1517429862644-b50d0efc4c02?w=800&amp;q=80" alt="Outdoor lighting project" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&amp;q=80" alt="Electrician tools and wiring" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&amp;q=85&amp;auto=format" alt="Electrical conduit installation" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="https://images.unsplash.com/photo-1513506003901-1e6a35068a18?w=800&amp;q=85&amp;auto=format" alt="LED lighting upgrade" loading="lazy"></div>
+                <div class="gallery-item glass grass-frame anim-fade-up"><img src="/img-smart-panel.png" alt="Smart electrical panel with digital display" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="container anim-fade-up">
+            <h2>Love What You See?</h2>
+            <p>Let us bring this same quality craftsmanship to your property. Get a 100% free estimate today.</p><a href="/contact/" class="btn btn-glow btn-lg">Get Free Solar Quote ☀️</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand"><img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/v1776961789/logo.png_eggsre.webp" alt="Logo" class="footer-logo">
+                <p>Transforming electrical systems for over 10 years.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Pages</h4><a href="/">Home</a><a href="/about/">About</a><a href="/services/">Services</a><a href="/gallery/">Gallery</a><a href="/contact/">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4><a href="/services/">Electrical Wiring</a><a href="/services/">Commercial Solar Systems</a><a href="/services/">EV Charger Install</a><a href="/services/">Panel Upgrade</a>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4><a href="tel:6192928062">(619) 292-8062</a><a href="mailto:info@solarquestpower.com">Email Us</a><span>San Diego, CA</span>
+            </div>
+        </div>
+        <!-- FOOTER MAP -->
+        <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.3!2d-116.9625!3d32.7948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9554056934bff%3A0x7bd0683b3b517351!2sYour%20Business%20Location!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SolarQuest Power location"></iframe>
+        </div>
+        <div class="footer-bottom" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;">
+            <p>© 2025 SolarQuest Power</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+
+<!-- QUOTE POPUP MODAL -->
+<div id="quote-popup" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(10,15,40,.75);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border-radius:20px;max-width:520px;width:100%;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.35);animation:popSlideIn .45s cubic-bezier(.34,1.56,.64,1) both;position:relative;">
+    <div style="background:linear-gradient(135deg,#1a2332 0%,#E87C2A 65%,#4D8C2A 100%);padding:32px 36px 24px;color:#fff;position:relative;">
+      <button onclick="document.getElementById('quote-popup').style.display='none'" style="position:absolute;top:14px;right:18px;background:rgba(255,255,255,.15);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Close">×</button>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.4);border-radius:50px;padding:4px 14px;font-size:11px;font-weight:700;color:#fcd34d;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px;">☀️ Limited Install Slots This Month</div>
+      <h2 style="font-size:26px;font-weight:900;line-height:1.2;margin-bottom:8px;">See How Much You Can<br>Save with Solar</h2>
+      <p style="font-size:14px;opacity:.85;margin:0;">Get a fast, free quote from certified solar professionals.</p>
+    </div>
+    <div style="background:#fff4eb;padding:10px 36px;display:flex;gap:20px;font-size:12px;font-weight:600;color:#c4621e;flex-wrap:wrap;">
+      <span>✓ C-10 Licensed</span><span>✓ Tier 1 Panels</span><span>✓ $0 Down Financing</span>
+    </div>
+    <form id="popup-quote-form" style="padding:24px 36px 32px;" onsubmit="sqPopupSubmit(event)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+        <div><label style="display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;">Your Name *</label>
+        <input type="text" name="name" placeholder="John Smith" required="" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;outline:none;font-family:inherit;"></div>
+        <div><label style="display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;">Phone *</label>
+        <input type="tel" name="phone" placeholder="(619) 292-8062" required="" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;outline:none;font-family:inherit;"></div>
+      </div>
+      <div style="margin-bottom:14px;"><label style="display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;">Email</label>
+      <input type="email" name="email" placeholder="you@example.com" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;outline:none;font-family:inherit;"></div>
+      <div style="margin-bottom:20px;"><label style="display:block;font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;">Service Needed</label>
+      <select name="service" style="width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;outline:none;background:#fff;font-family:inherit;">
+        <option value="">Select a service...</option>
+        <option>Residential Commercial Solar Systems</option><option>Commercial Solar Systems</option>
+        <option>EV Charger Installation</option><option>Solar + Battery Storage</option>
+        <option>Solar System Monitoring</option><option>Solar Financing Consultation</option>
+        <option>Roof Assessment &amp; Solar Design</option><option>Net Metering Setup</option>
+        <option>Solar Design Consultation</option><option>Free Solar Consultations</option>
+      </select></div>
+      <button type="submit" style="width:100%;padding:16px;background:linear-gradient(135deg,#E87C2A,#c4621e);color:#fff;font-size:16px;font-weight:800;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 20px rgba(232,124,42,.4);font-family:inherit;">⚡ ☀️ Get My Free Solar Quote</button>
+      <p style="text-align:center;font-size:12px;color:#94a3b8;margin:10px 0 0;">No spam, no commitment — we'll reach out fast.</p>
+    </form>
+    <div id="popup-success" style="display:none;padding:40px 36px;text-align:center;">
+      <div style="font-size:52px;margin-bottom:14px;">✅</div>
+      <h3 style="font-size:22px;font-weight:900;color:#0f172a;margin-bottom:8px;">Request Received!</h3>
+      <p style="color:#475569;margin-bottom:24px;">Our solar team will respond within a few hours. For faster service, call us now:</p>
+      <a href="tel:6192928062" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#E87C2A,#c4621e);color:#fff;padding:14px 28px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;">📞 (619) 292-8062</a>
+    </div>
+  </div>
+</div>
+<style>
+@keyframes popSlideIn{from{opacity:0;transform:scale(.88) translateY(28px)}to{opacity:1;transform:scale(1) translateY(0)}}
+</style>
+<script>
+(function(){
+  if(sessionStorage.getItem('sqQuoteShown')) return;
+  var shown=false;
+  function show(){
+    if(shown) return; shown=true;
+    sessionStorage.setItem('sqQuoteShown','1');
+    var el=document.getElementById('quote-popup');
+    if(el) el.style.display='flex';
+  }
+  setTimeout(show, 4500);
+  document.addEventListener('mouseleave',function(e){if(e.clientY<5) show();});
+  var pop=document.getElementById('quote-popup');
+  if(pop) pop.addEventListener('click',function(e){if(e.target===this) this.style.display='none';});
+})();
+function sqPopupSubmit(e){
+  e.preventDefault();
+  document.getElementById('popup-quote-form').style.display='none';
+  document.getElementById('popup-success').style.display='block';
+}
+</script>
+<!-- END POPUP -->
+
+
+<div id="preact-border-shadow-host" popover="manual" style="border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px; margin: 0px; inset: 0px; position: fixed; width: 100vw; height: 100vh; background: transparent; pointer-events: none;"></div></body></html>
