@@ -1,0 +1,286 @@
+/* ================================================================
+   SOLARQUEST POWER — BRAND THEME
+   Color system: Orange + Green + Sky Blue (from logo)
+   ================================================================ */
+
+/* ── Core color tokens ── */
+:root {
+    --green:       #E87C2A;
+    --green-deep:  #c4621e;
+    --green-dark:  #1a2332;
+    --green-light: #fff4eb;
+    --green-glass: rgba(232, 124, 42, .12);
+    --green-glow:  rgba(232, 124, 42, .45);
+    --green-border:rgba(232, 124, 42, .25);
+    --off-white:   #fef9f3;
+    --accent:      #4D8C2A;
+    --sq-orange:   #E87C2A;
+    --sq-green:    #4D8C2A;
+    --sq-blue:     #5B9BD5;
+    --sq-dark:     #1a2332;
+}
+
+/* ── Body background: warm solar tint ── */
+body {
+    background: linear-gradient(135deg, #fef9f3 0%, #fff4eb 35%, #f0f9ff 70%, #fef9f3 100%);
+}
+
+/* ── Text gradient: orange → green ── */
+.text-gradient {
+    background: linear-gradient(135deg, #E87C2A 0%, #4D8C2A 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: none !important;
+}
+
+/* Hero h1 gradient override — lighter for dark backgrounds */
+.hero h1 .text-gradient {
+    background: linear-gradient(135deg, #f5a623 0%, #8BC34A 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: none !important;
+}
+
+/* ── Top bar ── */
+.top-bar {
+    background: linear-gradient(135deg, #1a2332 0%, #2d1a0a 100%) !important;
+}
+
+/* ── Buttons ── */
+.btn-glow {
+    background: linear-gradient(135deg, #E87C2A 0%, #c4621e 100%) !important;
+    box-shadow: 0 4px 20px rgba(232,124,42,.4) !important;
+    animation: btnPulseOrange 3s ease-in-out infinite !important;
+}
+.btn-glow:hover {
+    box-shadow: 0 8px 32px rgba(232,124,42,.6) !important;
+    transform: translateY(-2px) !important;
+}
+@keyframes btnPulseOrange {
+    0%,100% { box-shadow: 0 4px 20px rgba(232,124,42,.4); }
+    50%      { box-shadow: 0 4px 36px rgba(232,124,42,.65), 0 0 60px rgba(77,140,42,.2); }
+}
+
+.btn-secondary {
+    color: #E87C2A !important;
+    border-color: #E87C2A !important;
+}
+.btn-secondary:hover {
+    background: #E87C2A !important;
+    color: #fff !important;
+}
+
+/* ── Nav links ── */
+.nav-links a::after { background: #E87C2A !important; }
+.nav-links a:hover, .nav-links a.active { color: #E87C2A !important; }
+.nav-logo img { filter: drop-shadow(0 2px 8px rgba(232,124,42,.25)) !important; }
+
+/* ── Section tags ── */
+.section-tag {
+    color: #c4621e !important;
+    background: rgba(232,124,42,.08) !important;
+    border: 1px solid rgba(232,124,42,.2) !important;
+}
+
+/* ── Orbs → warm solar tones ── */
+.orb-1 { background: radial-gradient(circle, rgba(232,124,42,.28), transparent 70%) !important; }
+.orb-2 { background: radial-gradient(circle, rgba(77,140,42,.22), transparent 70%) !important; }
+.orb-3 { background: radial-gradient(circle, rgba(91,155,213,.18), transparent 70%) !important; }
+.orb-4 { background: radial-gradient(circle, rgba(232,124,42,.15), transparent 70%) !important; }
+
+/* ── Stats bar ── */
+.stats-bar { background: linear-gradient(135deg, #1a2332 0%, #2d1a0a 100%) !important; }
+.stat-number { color: #f5a623 !important; }
+
+/* ── Hero overlay → warm dark ── */
+.hero-bg::after {
+    background: linear-gradient(135deg, rgba(0,0,0,.55) 0%, rgba(26,35,50,.5) 50%, rgba(0,0,0,.4) 100%) !important;
+}
+
+/* ── Hero badge ── */
+.hero-badge {
+    color: #ffe0c0 !important;
+    background: rgba(232,124,42,.15) !important;
+    border-color: rgba(232,124,42,.3) !important;
+}
+
+/* ── Page hero (sub-pages) ── */
+.page-hero {
+    background: linear-gradient(135deg, #1a2332 0%, #3d2008 60%, #2d4a0a 100%) !important;
+}
+.page-hero::before {
+    background: radial-gradient(ellipse at 30% 40%, rgba(232,124,42,.2), transparent 60%),
+                radial-gradient(ellipse at 70% 60%, rgba(77,140,42,.12), transparent 60%) !important;
+}
+
+/* ── CTA banner ── */
+.cta-banner {
+    background: linear-gradient(135deg, #1a2332 0%, #3d2008 60%, #2d4a0a 100%) !important;
+}
+
+/* ── Grass dividers → warm orange wave ── */
+.grass-divider path, .grass-divider svg path {
+    fill: #E87C2A !important;
+    opacity: .1 !important;
+}
+/* Remove the grass image frame overlay */
+.grass-frame::after { display: none !important; }
+
+/* ── Form focus states ── */
+.hero-form-card input:focus,
+.hero-form-card select:focus,
+.hero-form-card textarea:focus {
+    border-color: #E87C2A !important;
+    box-shadow: 0 0 0 3px rgba(232,124,42,.12) !important;
+}
+
+/* ── Service cards ── */
+.service-card:hover {
+    box-shadow: 0 16px 48px rgba(232,124,42,.2) !important;
+    transform: translateY(-4px) !important;
+}
+.service-card .service-icon {
+    color: #E87C2A !important;
+    background: rgba(232,124,42,.08) !important;
+}
+
+/* ── Value / Why-us cards ── */
+.value-card > i,
+.value-card .value-icon { color: #E87C2A !important; }
+
+/* ── Process numbers ── */
+.process-num, .step-num {
+    background: linear-gradient(135deg, #E87C2A, #4D8C2A) !important;
+    color: #fff !important;
+}
+
+/* ── Feature chips ── */
+.feature-chip i { color: #E87C2A !important; }
+.feature-chip { border-color: rgba(232,124,42,.2) !important; }
+
+/* ── Footer ── */
+.footer {
+    background: linear-gradient(180deg, #1a2332 0%, #2d1a0a 100%) !important;
+}
+.footer-socials a:hover { background: rgba(232,124,42,.4) !important; color: #f5a623 !important; transform: translateY(-2px); }
+.footer-bottom-socials a:hover { color: #E87C2A !important; }
+
+/* ── Review stars ── */
+.review-stars, .star.active, .review-stars-preview span { color: #f5a623 !important; }
+
+/* ── Chat widget header ── */
+.wa-chat-header {
+    background: linear-gradient(135deg, #1a2332 0%, #E87C2A 100%) !important;
+}
+
+/* ── Sticky bar ── */
+.sticky-btn-primary {
+    background: linear-gradient(135deg, #E87C2A, #c4621e) !important;
+    color: #fff !important;
+}
+.sticky-btn-review { background: #4D8C2A !important; color: #fff !important; border-radius: 12px !important; overflow: hidden !important; }
+.sticky-btn-primary { border-radius: 12px !important; overflow: hidden !important; }
+.mobile-sticky-bar .sticky-btn { border-radius: 12px !important; overflow: hidden !important; }
+
+/* ── FAQ open indicator ── */
+.faq-item.open .faq-q { color: #E87C2A !important; }
+
+/* ── Energy particle canvas ── */
+#leaf-canvas {
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9998 !important;
+}
+
+/* ── Gallery image aspect ratio fix ── */
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* ── About section image ── */
+.image-frame img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+/* Hero fallback if image fails */
+.hero-bg {
+    background: linear-gradient(135deg, #1a2332 0%, #3d2008 50%, #2d4a0a 100%) !important;
+}
+
+/* ── WA/Chat FAB → SolarQuest Orange ── */
+.wa-fab {
+    background: linear-gradient(135deg, #E87C2A, #c4621e) !important;
+    box-shadow: 0 4px 20px rgba(232,124,42,.5) !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+}
+.wa-fab:hover {
+    box-shadow: 0 8px 32px rgba(232,124,42,.7) !important;
+}
+.wa-fab .fa-whatsapp {
+    filter: brightness(10) !important;
+    font-size: 26px !important;
+}
+.wa-pulse {
+    border-color: #E87C2A !important;
+}
+
+/* ── Position chat widget ── */
+.wa-chat-widget {
+    bottom: 96px !important;
+    z-index: 9500 !important;
+}
+
+/* ── Mobile sticky bar fix ── */
+.mobile-sticky-bar {
+    z-index: 9000 !important;
+}
+
+/* ── Before/After slider improvements ── */
+.ba-slider-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.ba-label {
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ── Stats bar number fix ── */
+.stat-card {
+    min-width: 120px;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(255,255,255,1) !important;
+}
+.stat-number { color: #f5a623 !important; }
+.stat-label { color: #0f172a !important; font-weight: 700 !important; }
+
+/* ── Section off-white background ── */
+.section[style*="background:var(--off-white)"] {
+    background: #fef9f3 !important;
+}
+
+/* ── Why-us card icon colors (varied) ── */
+.values-grid .value-card:nth-child(1) i { color: #E87C2A !important; }
+.values-grid .value-card:nth-child(2) i { color: #4D8C2A !important; }
+.values-grid .value-card:nth-child(3) i { color: #5B9BD5 !important; }
+.values-grid .value-card:nth-child(4) i { color: #E87C2A !important; }
+.values-grid .value-card:nth-child(5) i { color: #4D8C2A !important; }
+.values-grid .value-card:nth-child(6) i { color: #5B9BD5 !important; }
